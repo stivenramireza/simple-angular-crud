@@ -1,0 +1,10 @@
+<form (ngSubmit)="add()">
+    <input 
+        type="text" 
+        placeholder="Enter your name" 
+        name="name" 
+        class="form-control"
+        [(ngModel)] = "item.name"
+    >
+    <button class="btn btn-warning mt-3" type="submit">Add</button>
+</form>

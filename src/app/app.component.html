@@ -1,5 +1,10 @@
-<ul>
-  <li class="text" *ngFor="let item of items | async">
-    {{item.name}}
-  </li>
-</ul>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <app-list></app-list>
+    </div>
+    <div class="col-md-6">
+      <app-list-add></app-list-add>
+    </div>
+  </div>
+</div>
