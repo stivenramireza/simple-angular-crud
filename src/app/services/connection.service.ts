@@ -38,4 +38,10 @@ export class ConnectionService {
     this.itemDoc = this.afs.doc<Item>(`items/${item.id}`);
     this.itemDoc.delete();
   }
+
+  updateItem(item) {
+    this.itemDoc = this.afs.doc<Item>(`items/${item.id}`);
+    this.itemDoc.update(item);
+  }
+  
 }

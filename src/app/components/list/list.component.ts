@@ -9,6 +9,9 @@ import { ConnectionService } from 'src/app/services/connection.service';
 export class ListComponent implements OnInit {
 
   items: any[] = [];
+  updatedItem: any = {
+    name: ''
+  };
 
   constructor(private connection: ConnectionService ) { 
     this.connection.listItems().subscribe(item => {
@@ -22,6 +25,14 @@ export class ListComponent implements OnInit {
 
   delete(item) {
     this.connection.deleteItem(item);
+  }
+
+  update(item) {
+    this.updatedItem = item;
+  }
+
+  addUpdatedItem() {
+    this.connection.updateItem(this.updatedItem);
   }
 
 }
